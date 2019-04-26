@@ -42,12 +42,29 @@
         padding: 30px;
         padding-top: 70px;
         margin: 0px;
+        margin-left: -140px;
         position: absolute;
         top: 88px;
-        bottom: -560px;
-        overflow: hidden;
+        bottom: -580px;
         background-color: rgb(182, 205, 248);
         width: 170px;
+        box-shadow: 1px 5px 10px grey;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .arrow {
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        position: absolute;
+        right: 5px;
+        top: 335px;
+        transition: all 0.5s ease-in-out;
+        background: url("assets/css/images/arrow.png");
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        width: 15px;
+        height: 17px;
       }
 
       .container-fluid {
@@ -104,6 +121,7 @@
         margin: 0px;
         padding: 0px;
         position: absolute;
+        box-shadow: 1px 4px 10px grey;
       }
 
       .nav-custom {
@@ -143,6 +161,22 @@
         text-align: justify;
         font-size: 16px;
       }
+
+      .sideLink {
+        color: rgb(25, 0, 134);
+        text-decoration: none;
+        border: none;
+      }
+
+      .sideLink:hover {
+        color: rgb(42, 0, 231);
+        text-decoration: none;
+      }
+
+      .sideLink:focus {
+        color: rgb(42, 0, 231);
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -162,7 +196,6 @@
                   alt="logo.png"
                   height="188"
                   width="255"
-                  style="box-shadow: 1px 4px 10px grey;"
                 />
               </div>
               <div class="nav-custom">
@@ -170,7 +203,7 @@
                   <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link " href="#">Aktualności</a>
+                        <a class="nav-link" href="#">Aktualności</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Branże</a>
@@ -200,22 +233,35 @@
           </div>
         </div>
         <div class="row">
-          <div class="sidebar">
-            Menu<br />
-            <hr style="border: none; border-top: 3px dotted #453cf2" />
-            Aktualności<br />
-            Branże<br />
-            Produkty<br />
-            Usługi<br />
-            Referencje<br />
-            Kontakt<br />
-            <hr style="border: none; border-top: 3px dotted #453cf2" />
-            O firmie<br />
-            Nagrody<br />
-            Relacje<br />
-            inwestorskie<br />
-            Partnerzy<br />
-            Kariera<br />
+          <div class="sidebar" id="sidebar">
+            <button class="arrow" id="arrow" onclick="sidebarSwitch()"></button>
+            <a style="color: rgb(25, 0, 134);">Menu</a>
+            <hr style="border: none; border-top: 3px dotted rgb(25, 0, 134)" />
+            <a class="sideLink" href="#">Aktualności</a>
+            <a class="sideLink" href="#">Branże</a>
+            <a class="sideLink" href="#">Produkty</a>
+            <a class="sideLink" href="#">Usługi</a>
+            <a class="sideLink" href="#">Referencje</a>
+            <a class="sideLink" href="#">Kontakt</a>
+            <hr style="border: none; border-top: 3px dotted rgb(25, 0, 134)" />
+            <a class="sideLink" href="#">O firmie</a>
+            <a class="sideLink" href="#">Nagrody</a>
+            <a class="sideLink" href="#">Relacje</a>
+            <a class="sideLink" href="#">inwestorskie</a>
+            <a class="sideLink" href="#">Partnerzy</a>
+            <a class="sideLink" href="#">Kariera</a>
+            <hr style="border: none; border-top: 3px dotted rgb(25, 0, 134)" />
+            <img
+              src="assets/css/images/facebook.png"
+              alt="facebook"
+              style="margin-top: 15px; margin-bottom: 20px; cursor: pointer;"
+            />
+            <br />
+            <img
+              src="assets/css/images/linkedin.png"
+              alt="linkedin"
+              style="cursor: pointer;"
+            />
           </div>
           <div
             style="width: 1000px; margin: auto; display: block; position: relative;"
@@ -351,6 +397,29 @@
       </div>
     </div>
     <!-- Optional JavaScript -->
+    <script type="text/javascript">
+      let sidebar = false;
+
+      function sidebarSwitch() {
+        if (sidebar == true) {
+          document
+            .getElementById("sidebar")
+            .setAttribute("style", "margin-left: -140px;");
+          document
+            .getElementById("arrow")
+            .setAttribute("style", "transform: rotate(180deg);");
+          sidebar = false;
+        } else if (sidebar == false) {
+          document
+            .getElementById("sidebar")
+            .setAttribute("style", "margin-left: 0px;");
+          document
+            .getElementById("arrow")
+            .setAttribute("style", "transform: rotate(0deg);");
+          sidebar = true;
+        }
+      }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
