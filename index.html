@@ -16,178 +16,14 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!--<link rel="stylesheet" href="assets/css/style.css" />-->
-    <style>
-      @font-face {
-        font-family: Corbert;
-        src: url(assets/css/fonts/Corbert-Regular.otf);
-      }
-
-      body {
-        padding: 0px;
-        margin: 0px;
-        font-family: Corbert;
-      }
-
-      .row {
-        margin: 0px;
-      }
-
-      .row .header {
-        height: 88px;
-      }
-
-      .sidebar {
-        padding: 30px;
-        padding-top: 70px;
-        margin: 0px;
-        margin-left: -140px;
-        position: absolute;
-        top: 88px;
-        bottom: -580px;
-        background-color: rgb(255, 255, 255);
-        width: 170px;
-        box-shadow: 1px 2px 10px grey;
-        transition: all 0.5s ease-in-out;
-      }
-
-      .arrow {
-        margin: 0px;
-        padding: 0px;
-        border: none;
-        position: absolute;
-        right: 5px;
-        top: 335px;
-        transition: all 0.5s ease-in-out;
-        background: url("assets/css/images/arrow.png");
-        background-repeat: no-repeat;
-        transform: rotate(180deg);
-        width: 15px;
-        height: 17px;
-      }
-
-      .container-fluid {
-        padding: 0px;
-      }
-
-      .searchbar {
-        position: absolute;
-        right: 10px;
-        top: 25px;
-        display: inline;
-      }
-
-      input[type="text"] {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background: url("assets/css/images/magnifier.png");
-        background-repeat: no-repeat;
-        transition: all 0.5s ease-in-out;
-        font-size: 0px;
-      }
-
-      input[type="text"]:focus {
-        padding: 5px;
-        background-position: 110px;
-        background-color: white;
-        box-sizing: border-box;
-        opacity: 0.5;
-        width: 150px;
-        font-size: 18px;
-        font-weight: 400;
-      }
-
-      .navbar-dark .navbar-nav .nav-link {
-        font-size: large;
-        color: rgb(255, 255, 255);
-        margin-left: 36px;
-        padding-right: 0px;
-      }
-
-      .header {
-        max-width: 1000px;
-        background-color: rgb(3, 3, 104);
-        margin: 0px auto;
-        padding: 0px;
-      }
-
-      .logo {
-        background-color: cornflowerblue;
-        width: 255px;
-        height: 188px;
-        display: inline-block;
-        margin: 0px;
-        padding: 0px;
-        position: absolute;
-        box-shadow: 1px 4px 10px grey;
-      }
-
-      .nav-custom {
-        max-width: 1000px;
-        margin: 25px auto 0px;
-        background-color: rgb(3, 3, 104);
-        padding-right: 0px;
-        display: inline-block;
-        position: relative;
-        left: 255px;
-      }
-
-      .footer {
-        background-color: rgb(3, 3, 104);
-        height: 88px;
-        position: absolute;
-        width: 100%;
-      }
-
-      .home {
-        width: 230px;
-        margin: 0px auto;
-        padding: 0px;
-      }
-
-      h3 {
-        color: darkblue;
-      }
-
-      h6 {
-        padding-bottom: 15px;
-        font-size: 16px;
-      }
-
-      p {
-        margin-top: 15px;
-        text-align: justify;
-        font-size: 16px;
-      }
-
-      .sideLink {
-        color: rgb(3, 3, 104);
-        text-decoration: none;
-        border: none;
-      }
-
-      .sideLink:hover {
-        color: rgb(42, 0, 231);
-        text-decoration: none;
-      }
-
-      .sideLink:focus {
-        color: rgb(42, 0, 231);
-        text-decoration: none;
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div
-      style="width:100%; margin: 0 auto; background-color:rgb(255, 255, 255)"
-    >
+    <div class="body-container">
       <div class="container-fluid">
         <div class="row">
-          <div
-            class="col-lg-12"
-            style="background-color:rgb(3, 3, 104); padding: 0; height: 88px"
-          >
+          <div class="col-lg-12 header-bootstrap-row">
             <div class="header">
               <div class="logo">
                 <img
@@ -233,75 +69,70 @@
         </div>
         <div class="row">
           <div class="sidebar" id="sidebar">
-            <button class="arrow" id="arrow" onclick="sidebarSwitch()"></button>
-            <a style="color: rgb(3, 3, 104);">Menu</a>
-            <hr style="border: none; border-top: 3px dotted rgb(3, 3, 104)" />
+            <button
+              class="sidebar-arrow"
+              id="arrow"
+              onclick="sidebarSwitch()"
+            ></button>
+            <a class="sidebar-menu">Menu</a>
+            <hr class="dotted-hr" />
             <a class="sideLink" href="#">Aktualności</a>
             <a class="sideLink" href="#">Branże</a>
             <a class="sideLink" href="#">Produkty</a>
             <a class="sideLink" href="#">Usługi</a>
             <a class="sideLink" href="#">Referencje</a>
             <a class="sideLink" href="#">Kontakt</a>
-            <hr style="border: none; border-top: 3px dotted rgb(3, 3, 104)" />
+            <hr class="dotted-hr" />
             <a class="sideLink" href="#">O firmie</a>
             <a class="sideLink" href="#">Nagrody</a>
             <a class="sideLink" href="#">Relacje</a>
             <a class="sideLink" href="#">inwestorskie</a>
             <a class="sideLink" href="#">Partnerzy</a>
             <a class="sideLink" href="#">Kariera</a>
-            <hr style="border: none; border-top: 3px dotted rgb(3, 3, 104)" />
+            <hr class="dotted-hr" />
             <img
               src="assets/css/images/facebook.png"
               alt="facebook"
-              style="margin-top: 15px; margin-bottom: 20px; cursor: pointer;"
+              class="sidebar-icon"
             />
             <br />
             <img
               src="assets/css/images/linkedin.png"
               alt="linkedin"
-              style="cursor: pointer;"
+              class="sidebar-icon"
             />
           </div>
-          <div
-            style="width: 1000px; margin: auto; display: block; position: relative;"
-          >
-            <div class="row" style="margin-top: 100px">
-              <div
-                class="offset-lg-4 col-lg-4"
-                style="padding: 0px 0px 0px 70px;"
-              >
-                <div style="display: inline-block;">
+          <div class="content-div">
+            <div class="row content-div-row">
+              <div class="offset-lg-4 col-lg-4 content-header">
+                <div class="home-icon">
                   <img src="assets/css/images/home.png" alt="home" />
                 </div>
-                <div
-                  style="display: inline-block; position: relative; top: 8px; left: 20px; color: rgb(3, 3, 104)"
-                >
+                <div class="home-header">
                   <h3>O FIRMIE</h3>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-12" style="padding: 0px; margin: 40px 0px">
-                <hr
-                  style="border: none; border-top: 3px dotted rgb(3, 3, 104)"
-                />
+              <div class="col-lg-12 content-separator">
+                <hr class="dotted-hr" />
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-12" style="">
-                <h6>SIMPLE - z nami biznes jest prostszy</h6>
+              <div class="col-lg-12">
+                <h6 class="content-h6">SIMPLE - z nami biznes jest prostszy</h6>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-6" style="">
+              <div class="col-lg-6">
                 <img
                   src="assets/css/images/stock.png"
                   alt="stock"
                   width="481px"
                   height="348px"
-                  style="margin-bottom: 15px"
+                  class="content-image"
                 />
-                <p>
+                <p class="content-paragraph">
                   PONAD 24 LATA DOŚWIADCZENIA <br />
                   SIMPLE S.A. jest wiodącym w kraju producentem rozwiązań
                   informatycznych do wspomagania zarządzania przedsiębiorstwami.
@@ -310,7 +141,7 @@
                   się warunków biznesowych i przepisów prawa oraz szybkiej
                   reakcji na zmieniające się potrzeby klientów.
                 </p>
-                <p>
+                <p class="content-paragraph">
                   PONAD 3 500 KLIENTÓW <br />
                   Działamy na polskim rynku producentów rozwiązań klasy ERP już
                   od ponad 24 lat! Dostarczamy rozwiązania, które sprawdziły się
@@ -319,7 +150,7 @@
                   głównych sektorów polskiego rynku. Ze współpracy z nami
                   skorzystało już blisko ponad 3,5 tysiąca firm.
                 </p>
-                <p>
+                <p class="content-paragraph">
                   PONAD 23 000 UŻYTKOWNIKÓW <br />
                   Nasze produkty zawsze charakteryzowały się udanym połączeniem:
                   innowacyjności, szerokiej funkcjonalności, adaptowalności i
@@ -327,19 +158,19 @@
                   dostosowany do możliwości naszych Klientów. Dlatego w 2010
                   roku liczba naszych użytkowników przekroczyła 25 tysiące
                 </p>
-                <p>
+                <p class="content-paragraph">
                   NASI ODBIORCY <br />
                   Odbiorcami naszych rozwiązań są głównie firmy budowlane,
                 </p>
               </div>
               <div class="col-lg-6">
-                <p>
+                <p class="content-paragraph">
                   przedsiębiorstwa produkcyjne, uczelnie wyższe, jednostki
                   medyczne oraz firmy usługowe i handlowe. Widzimy i wspólnie
                   wykorzystujemy możliwości jakie daje proces integracji Polski
                   z Unią Europejską.
                 </p>
-                <p>
+                <p class="content-paragraph">
                   ZINTEGROWANE ROZWIĄZANIA DLA KAŻDEJ BRANŻY <br />
                   SIMPLE posiada kompleksowe rozwiązania, dedykowane największym
                   sektorom naszej gospodarki. W naszej ofercie znajdą Państwo
@@ -350,7 +181,7 @@
                   systemów dedykowanych pod indywidualne potrzeby klientów oraz
                   integrację wszelkich rozwiązań wspomagających zarządzanie.
                 </p>
-                <p>
+                <p class="content-paragraph">
                   CERTYFIKATY I REKOMENDACJE <br />
                   SIMPLE S.A. posiada istotne na polskim rynku rekomendacje od
                   Polskiego Towarzystwa Ekonomicznego oraz Stowarzyszenia
@@ -362,7 +193,7 @@
                   wdrażania systemów informatycznych, a także  sprzedaż i
                   instalacja sprzętu komputerowego oraz szkolenia.
                 </p>
-                <p>
+                <p class="content-paragraph">
                   Oprogramowanie SIMPLE zostało wyróżnione również: GAZELĄ
                   BIZNESU, MEDALEM EUROPEJSKIM, statuetką TopBuilder oraz
                   posiada status Microsoft Gold Certified Partner oraz BRE
@@ -372,7 +203,7 @@
                   tytuł "Najlepszy dostawca IT dla przemysłu 2010 w kategorii
                   ERP/MRP II (system polski)- producent".
                 </p>
-                <p>
+                <p class="content-paragraph"></p>
                   ZAWSZE BLISKO CIEBIE <br />
                   SIMPLE S.A. wraz z Partnerami prowadzi szeroko zakrojoną
                   sprzedaż do Klientów na terenie całego kraju. Chcemy być jak
@@ -383,7 +214,7 @@
             </div>
           </div>
         </div>
-        <div class="row footer">
+        <div class="row footer"></div>
           <div class="col-lg-12"></div>
         </div>
       </div>

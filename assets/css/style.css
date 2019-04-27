@@ -1,0 +1,209 @@
+@font-face {
+  font-family: Corbert;
+  src: url(fonts/Corbert-Regular.otf);
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Corbert;
+}
+
+.body-container {
+  width: 100%;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: large;
+  color: rgb(255, 255, 255);
+  margin-left: 34px;
+  padding-right: 0px;
+}
+
+.nav-custom {
+  max-width: 1000px;
+  margin: 25px auto 0px;
+  background-color: #01385c;
+  padding-right: 0px;
+  display: inline-block;
+  position: relative;
+  left: 260px;
+}
+
+input[type="text"] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: url("images/magnifier.png");
+  background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
+  font-size: 0px;
+}
+
+input[type="text"]:focus {
+  padding: 5px;
+  background-position: 110px;
+  background-color: white;
+  box-sizing: border-box;
+  opacity: 0.5;
+  width: 150px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.searchbar {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  display: inline;
+}
+
+.row {
+  margin: 0px;
+}
+
+.header {
+  height: 88px;
+  max-width: 1000px;
+  background-color: #01385c;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.header-bootstrap-row {
+  background-color: #01385c;
+  padding: 0;
+  height: 88px;
+}
+
+.logo {
+  background-color: cornflowerblue;
+  width: 255px;
+  height: 188px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  box-shadow: 1px 4px 5px grey;
+}
+
+.content-div {
+  width: 1000px;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+.content-div-row {
+  margin-top: 100px;
+}
+
+.content-header {
+  padding: 0px 0px 0px 70px;
+}
+
+.home-icon {
+  display: inline-block;
+}
+
+.home-header {
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  left: 20px;
+  color: #01385c;
+}
+
+.content-separator {
+  padding: 0px 15px;
+  margin: 40px 0px;
+}
+
+.sidebar {
+  padding: 30px;
+  padding-top: 70px;
+  margin: 0px;
+  margin-left: -140px;
+  position: absolute;
+  top: 88px;
+  bottom: -580px;
+  background-color: #ffffff;
+  width: 170px;
+  box-shadow: 1px 2px 10px grey;
+  transition: all 0.5s ease-in-out;
+}
+
+.sideLink {
+  color: #01385c;
+  text-decoration: none;
+  border: none;
+}
+
+.sideLink:hover {
+  color: #2a00e7;
+  text-decoration: none;
+}
+
+.sideLink:focus {
+  color: #2a00e7;
+  text-decoration: none;
+}
+
+.sidebar-menu {
+  color: #01385c;
+}
+
+.dotted-hr {
+  border: none;
+  border-top: 3px dotted #01385c;
+}
+
+.sidebar-icon {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.sidebar-arrow {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 335px;
+  transition: all 0.5s ease-in-out;
+  background: url("images/arrow.png");
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  width: 15px;
+  height: 17px;
+}
+
+.content-h6 {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+.content-image {
+  margin-bottom: 20px;
+}
+
+.content-paragraph {
+  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.footer {
+  background-color: #01385c;
+  width: 100%;
+  height: 88px;
+  margin-top: 30px;
+  position: absolute;
+}
