@@ -132,8 +132,9 @@ input[type="text"]:focus {
   margin-left: -140px;
   position: absolute;
   top: 88px;
-  bottom: -580px;
+  bottom: -880px;
   background-color: #ffffff;
+  max-height: 1500px;
   width: 170px;
   box-shadow: 1px 2px 10px grey;
   transition: all 0.5s ease-in-out;
